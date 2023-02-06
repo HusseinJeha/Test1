@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p id="text" style="color: #f2f2f2; font-size: 15px;">Please if you are allergic to anything .Please let us Know this for your health .Thank you !</p> 
+
+    <style>
+       
+    #text {
+        
+      position: absolute;
+      top: 50%;
+      left: 0;
+      animation: move-text 10s linear infinite;
+    }
+    
+    @keyframes move-text {
+      from {
+        left: 0;
+      }
+      to {
+        left: 100%;
+      }
+    }
+    </style>
+   
+    <br></br>
+    <br></br>
+    <title >Food Menu</title>
+    
+    <style>
+       .food-item {
+         display: flex;
+         justify-content: space-between;
+         padding: 5px;
+       }
+     </style>
+ </head>
+ <body>
+
+
+
+  <div id="navbar">
+    <a href="#default" id="logo">Reservation</a>
+    <div id="navbar-right">
+        
+        <a href="#" onclick="window.location.href='RestorantZizo.html';" >Home</a>
+        <a href="#" onclick="window.location.href='RESERVATION.html';" >Reservation</a>
+        <a href="#" onclick="window.location.href='Menu.html';" class="active" >Menu</a>
+    
+    </div>
+  </div>
+  <style>
+    /* Create a sticky/fixed navbar */
+#navbar {
+
+overflow: hidden;
+background-color: #7c6e6e;
+padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+position: fixed; /* Sticky/fixed navbar */
+width: 100%;
+top: 0; /* At the top */
+z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+
+float: left;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
+}
+
+/* Style the logo */
+#navbar #logo {
+font-size: 35px;
+font-weight: bold;
+transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+background-color: #ddd;
+color: black;
+}
+/* Style the active/current link */
+#navbar a.active {
+background-color: rgb(35, 131, 64);
+color: white;
+}
+
+
+/* Display some links to the right */
+#navbar-right {
+float: right;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+#navbar {
+padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+}
+#navbar a {
+float: none;
+display: block;
+text-align: left;
+}
+#navbar-right {
+float: none;
+}
+}
+  </style>
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+document.getElementById("navbar").style.padding = "30px 10px";
+document.getElementById("logo").style.fontSize = "25px";
+} else {
+document.getElementById("navbar").style.padding = "80px 10px";
+document.getElementById("logo").style.fontSize = "35px";
+}
+} 
+</script>
+
+
+
+
+
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+  <h1 style="color: rgb(27, 224, 214);">Food Menu</h1>
+
+   <div id="Speisekarte" style="text-align: center;">
+     
+       <h1 style="color: #f7f4f4;"><u> Frühstücksangebot</u></h1>
+       <h4 style="color: rgb(228, 219, 219);">Jeden Tag bis 13 Uhr</h4>
+       </div>
+  
+   <h1> </h1>
+  
+   <ul>
+     <li class="food-item">
+       <div>1. Spezialfrühstück</div>
+       <div>15,90€</div> 
+     </li>
+     <h6 style="font-size: small;">Gekochtes Ei, Butter, Käse, Wurst, Marmelade, Nutella, Oliven, frisches Obst und Gemüse 
+       + Wahlweise eine Tasse Kaffee oder Tee
+       </h6>
+     <li class="food-item">
+       <div>2. libanesische Frühstücksplatte</div>
+       <div>16,90€</div>
+     </li>
+     <h6 style="font-size: small;">Labne, Zaatar, Oliven, Foul, Msabaha, Käse und frisches Gemüse
+       + Wahlweise eine Tasse Kaffee oder Tee  
+       </h6>
+     
+     <li class="food-item">
+       <div>3. Expressfrühstück</div>
+       <div>10,90€</div>
+     </li>
+     <h6 style="font-size: small;">Gekochtes Ei, Marmelade, Butter, Käse, Wurst, Nutella, frisches Gemüse
+       +Wahlweise eine Tasse Kaffee oder Tee 
+       </h6>
+       <li class="food-item">
+           <div>4. Spiegelei</div>
+           <div>4,50€</div>
+         </li>
+         <li class="food-item">
+           <div>5. Rührei</div>
+           <div>4,50€</div>
+         </li>
+         <li class="food-item">
+           <div>6. Rührei mit Sucuk</div>
+           <div>6,90€</div>
+         </li>
+         <li class="food-item">
+           <div>7. Omelette</div>
+           <div>5,90€</div>
+         </li>
+         <li class="food-item">
+           <div>8. Omelette mit Champignons</div>
+           <div>6,90€</div>
+         </li>
+         <li class="food-item">
+           <div>9. Omelett mit Gemüse</div>
+           <div>7,50€</div>
+         </li>
+         <li class="food-item">
+           <div>10. Menemen</div>
+           <div>7,50€</div>
+         </li>
+         <h6 style="font-size: small;"> gebratenes Gemüse und Spiegelei</h6>
+         <li class="food-item">
+           <div>11. Menemen mit Sucuk</div>
+           <div>8,90€</div>
+         </li>
+         <h6 style="font-size: small;">Sucuk mit gebratenem Gemüse und Spiegelei</h6>
+  
+         <li class="food-item">
+           <div>12. Msabaha</div>
+           <div>6,90€</div>
+         </li>
+         <h6 style="font-size: small;">Kichererbsen Paste, Knoblauch, Petersilie, Olivenöl, Sesampaste, verfeinert mit Tomaten, Beilagen Teller</h6>
+         <li class="food-item">
+           <div>13. Foul </div>
+           <div>6,90€</div>
+         </li>
+         <h6 style="font-size: small;">Bohnenpüree, Knoblauch, Petersilie, Olivenöl, Sesampaste, verfeinert mit Tomaten, Beilagen Teller</h6>
+         <li class="food-item">
+           <div>14. Fateh</div>
+           <div>8,90€</div>
+         </li>
+         <h6 style="font-size: small;">Kichererbsen, Knoblauch, Petersilie, Pinienkerne, geröstetes Brot, Joghurt, Sesampaste, Beilagen Teller</h6>
+         <li class="food-item">
+           <div>15.Fateh mit Hackfleisch</div>
+           <div>10,50€</div>
+         </li>
+         <h6 style="font-size: small;">Kichererbsen, Knoblauch, Petersilie, Pinienkerne, Hackfleisch, geröstetes Brot, Joghurt, Sesampaste, Beilagen Teller</h6>
+         
+<h5><u>Zu allen Frühstücksangeboten servieren wir einen Brotkorb dazu.
+   ->Bei Allergien bitte Bescheid geben!</u>
+</h5>
+       </ul>
+       <div  class="food-item" style="text-align: center;">
+       <h2>Vorspeisen</h2>
+      
+       </div>
+       
+       <ul>
+           <li class="food-item">
+             <div>24. Mezze Platte	</div>
+             <div>9,90€</div> 
+           </li>
+           <h6 style="font-size: small;">Taboulé, Falafel, Hummus, Weintraubenblätter, Zaziki , Mtabal </h6>
+       
+           <li class="food-item">
+               <div>25. Hummus Teller</div>
+               <div>5,90€</div> 
+             </li>
+             <h6 style="font-size: small;">Orientalische Kichererbsen Paste </h6>
+
+             <li class="food-item">
+               <div>26. Mtabal</div>
+               <div>5,90€</div> 
+             </li>
+             <h6 style="font-size: small;">Orientalische Auberginen Paste</h6>
+             <li class="food-item">
+               <div>27.Weintraubenblätter (6 Stk.)</div>
+               <div>6,00€</div> 
+             </li>
+             <li class="food-item">
+               <div>28. Falafel Teller	 (4 Stk.)</div>
+               <div>9,00€</div> 
+             </li>
+             <h6 style="font-size: small;">Orientalische Gemüsefrikadellen mit Pommes und Gemüse</h6>
+             <li class="food-item">
+               <div>29. Bruschetta</div>
+               <div>6,90€</div> 
+             </li>
+             <li class="food-item">
+               <div>30. Mozzarella Teller</div>
+               <div>6,90€</div> 
+             </li>
+             <h6>Mozzarella mit Tomaten </h6>
+             <li class="food-item">
+               <div>31. Zaziki </div>
+               <div>5,50€</div> 
+             </li>
+       </ul>
+   </ul>
+   <div  class="food-item" >
+   <h2>Suppen</h2>
+   
+   </div>
+       <ul>
+           <li class="food-item">
+               <div>39. Tagessuppe </div>
+               <div>5,90€</div> 
+             </li> 
+             <h5>(jeden Tag im Wechsel)</h5>
+       </ul>
+       <div  class="food-item">
+           <h2>Salate</h2>
+           
+           </div>
+       <ul>
+           <li class="food-item">
+               <div>46. Taboulé</div>
+               <div>6,90€</div> 
+             </li> 
+             <h5>Petersilie, Tomate, Bulgur, Lauchzwiebel, Minze</h5>
+      
+             <li class="food-item">
+               <div>47. Fatoush</div>
+               <div>6,50€</div> 
+             </li> 
+             <h5>Petersilie, Tomate, Gurke, Lauchzwiebel, geröstetes Brot</h5>
+             <li class="food-item">
+               <div>48.Gemischter Salat </div>
+               <div>8,50€</div> 
+             </li> 
+             <h5>Gemischter Blattsalat, Tomate, Gurke, Peperoni, Oliven, rote Zwiebeln</h5>
+             <li class="food-item">
+               <div>49.Schafskäsesalat</div>
+               <div>8,90€</div> 
+             </li> 
+             <h5>Gemischter Blattsalat, Tomate, Gurke, Peperoni, Oliven, rote Zwiebeln, Schafskäse</h5>
+             <li class="food-item">
+               <div>50. Mozzarellasalat</div>
+               <div>8,90€</div> 
+             </li> 
+             <h5>Gemischter Blattsalat, Tomate, Gurke, Peperoni, Oliven, rote Zwiebeln, Mozzarella</h5>
+             <li class="food-item">
+               <div>51. Ceaser salad</div>
+               <div>10,50€</div> 
+             </li> 
+             <h5>Gemischter Blattsalat, Tomate, Peperoni, Oliven, rote Zwiebeln, Hähnchenbrust</h5>
+             
+             <li class="food-item">
+               <div>53. Scampi Salat</div>
+               <div>12,90€</div> 
+             </li> 
+             <h5>Gemischter Blattsalat, Tomate, Peperoni, Oliven, rote Zwiebeln, Scampi</h5>
+             <h6 style="font-size: small;">1x Salatdressing nach Wah</h6>
+             <h4>Dressings:</h4><h6>Taratour (Sesamsauce), Joghurt-Dressing, Balsamico-Dressing, Cocktail-Dressing</h6>
+      
+           </ul>
+           <div  class="food-item" >
+               <h2>Manaish</h2>
+               
+               </div>
+           <ul>
+               <li class="food-item">
+                   <div>60. Zaatar Oregano</div>
+                   <div>3,50€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>61. Käse / Schafskäse</div>
+                   <div>4,00€</div> 
+                 </li> 
+                 <li class="food-item">
+                   <div>62. Lahm Be Ajin Hackfleisch</div>
+                   <div>4,50€</div> 
+                 </li> 
+                 <li class="food-item">
+                   <div>63. Harra Scharf</div>
+                   <div>3,50€</div> 
+                   <li class="food-item">
+                       <div>64. gefüllte Spinattasche</div>
+                       <div>4,00€</div> 
+                 </li> 
+                 <li class="food-item">
+                   <div>65. gefüllte Spinattasche mit Käse</div>
+                   <div>4,90€</div> 
+             </li> 
+                 
+           </ul>
+           <div  class="food-item" >
+               <h2>Pizza</h2>
+              
+               </div>
+           <ul>
+               <li class="food-item">
+                   <div>72. Pizza Margherita</div>
+                   <div>7,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>73. Pizza Vegetarisch</div>
+                   <div>8,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>74. Pizza Champignon</div>
+                   <div>7,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>75. Pizza Spinat & Schafskäse</div>
+                   <div>8,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>76. Pizza Salami</div>
+                   <div>8,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>77. Pizza Sucuk mit Peperoni</div>
+                   <div>9,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>78. Pizza Chicken mit Mais und Hollandais </div>
+                   <div>9,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>79. Pizza Thunfisch mit Zwiebeln</div>
+                   <div>9,90€</div> 
+                 </li>
+                 <li class="food-item">
+                   <div>80. Pizza Scampi</div>
+                   <div>11,90€</div> 
+                 </li>
+                 <h5>->Jede weitere Beilage 1,50€</h5>
+                 </ul>
+                 <div  class="food-item">
+                   <h2>Gerichte aus dem Ofen</h2>
+                   
+                   </div>
+                 <ul>
+                   <li class="food-item">
+                       <div>87. Gemüseauflauf</div>
+                       <div>8,90€</div> 
+                     </li>
+                     <li class="food-item">
+                       <div>88. Nudelauflauf mit Hähnchen</div>
+                       <div>9,90€</div> 
+                     </li>
+                     <li class="food-item">
+                       <div>89. Kartoffelauflauf</div>
+                       <div>8,90€</div> 
+                     </li>
+                     <li class="food-item">
+                       <div>90. Ofenkartoffel mit Zaziki</div>
+                       <div>7,90€</div> 
+                     </li>
+                     </ul>
+
+                     <div  class="food-item" >
+                       <h2>Pasta</h2>
+                       
+                       </div>
+
+                     <ul>
+                       <li class="food-item">
+                           <div>100. Penne Alfredo</div>
+                           <div>10,90€</div> 
+                         </li>
+                         <h6>mit Hähnchen und Champignons in Sahnesauce</h6>
+                         <li class="food-item">
+                           <div>101. Penne Champignon</div>
+                           <div>9,90€</div> 
+                           
+                         </li>
+                         <h6>in Sahnesauce</h6>
+                         <li class="food-item">
+                           <div>102. Spaghetti Bolognese</div>
+                           <div>9,90€</div> 
+                         </li>
+                         <h6>in Tomatensauce</h6>
+
+                         <li class="food-item">
+                           <div>103. Tagliatelle mit Lachs</div>
+                           <div>14,90€</div> 
+                         </li>
+                         <h6>in Sahnesauce</h6>
+                         <li class="food-item">
+                           <div>104. Spaghetti Scampi</div>
+                           <div>12,90€</div> 
+                         </li>
+                         <h6>in Sahnesauce</h6>
+                         </ul>
+
+                         <div  class="food-item" >
+                           <h2>Burger & Snacks</h2>
+                          
+                           </div>
+                        <ul>
+                           <li class="food-item">
+                               <div>100. Burger</div>
+                               <div>11,90€</div> 
+                             </li>
+                             <li class="food-item">
+                               <div>101. Cheeseburger</div>
+                               <div>12,90€</div> 
+                             </li>
+                             <li class="food-item">
+                               <div>102. Chicken Burger</div>
+                               <div>10,90€</div> 
+                             </li>
+                             <li class="food-item">
+                               <div>103. Chicken Cheeseburger</div>
+                               <div>11,90€</div> 
+                             </li>
+                             <li class="food-item">
+                               <div>104. Chicken Nuggets (5 Stk.)</div>
+                               <div>6,90€</div> 
+                             </li>
+                             <li class="food-item">
+                               <div>105. Escalope (Schnitzel)</div>
+                               <div>10,90€</div> 
+                             </li>
+                               <h6>->Alle Burger und Snacks werden mit Pommes und Sauce serviert</h6>
+                        </ul> 
+                        <div  class="food-item" >
+                           
+                           </div>
+<ul>
+   <li class="food-item">
+       <div>112. Toast Sandwich Cheese</div>
+       <div>4,00€</div> 
+     </li>
+     <h6>mit Käse und Tomaten</h6>
+     <li class="food-item">
+       <div>113. Toast Sandwich Sucuk</div>
+       <div>4,50€</div> 
+     </li>
+     <h6>mit Sucuk und Käse</h6>
+     <li class="food-item">
+       <div>114. Falafel Sandwich</div>
+       <div>3,50€</div> 
+     </li>
+     <h6>mit Gemüse und Taratour (Sesamsauce)</h6>
+     <li class="food-item">
+       <div>115. Hähnchen Sandwich </div>
+       <div>4,00€</div> 
+     </li>
+     <h6>mit Gemüse und Aioli</h6>
+     <li class="food-item">
+       <div>116. Lahme Sandwich</div>
+       <div>4,90€</div> 
+     </li>
+     <h6>Gemüse und Taratour (Sesamsauce)</h6>
+
+</ul>
+
+<div  class="food-item" >
+   <h2>Grillgerichte</h2>
+  
+   </div>
+<ul>
+   <li class="food-item">
+       <div>121. Kafta</div>
+       <div>15,90€</div> 
+     </li>
+     <h6>mit Reis/Bulgur o. Pommes & Salat</h6>
+     <li class="food-item">
+       <div>122. Tawouk</div>
+       <div>16,90€</div> 
+     </li>
+     <h6>Hähnchenspieß mit Reis/Bulgur  o. Pommes, Hummus, Aioli & Salat</h6>
+     <li class="food-item">
+       <div>123. Lammspieß</div>
+       <div>18,90€</div> 
+     </li>
+    <h6>mit Reis/Bulgur o. Pommes, Hummus, Aioli & Salat</h6>      
+
+    <li class="food-item">
+       <div>124. Lachsfilet</div>
+       <div>22,90€</div> 
+     </li>
+    <h6>mit Reis/Bulgur  o. Pommes & Salat</h6>      
+
+    <li class="food-item">
+       <div>125. Calamari</div>
+       <div>20,90€</div> 
+     </li>
+    <h6>mit mediterranem Gemüse</h6>      
+        
+    <li class="food-item">
+       <div>126. Scampi</div>
+       <div>22,90€</div> 
+     </li>
+    <h6>mit mediterranem Gemüse</h6>      
+    <li class="food-item">
+       <div>127. Dorade </div>
+       <div>24,90€</div> 
+     </li>
+    <h6>mit mediterranem Gemüse o. Pommes & Salat</h6>      
+    <li class="food-item">
+       <div>128. Das Beste vom Lamm </div>
+       <div>26,00€</div> 
+     </li>
+    <h6>Lammkotelette, Lammfilet, Lammrücken mit mediterranem Gemüse 
+       & Reis/Bulgur o. Pommes
+       </h6>      
+     </ul>
+     <div  class="food-item" >
+       <h2>Getränke</h2>
+       
+       </div>
+     <h4>Kalte Getränke</h4>
+     <ul>
+       <li class="food-item">
+           <div>135. Stilles Wasser</div>
+           <div>0,25L  	3,20€</div> 
+         </li>
+         <li class="food-item">
+           <div>136. Mineralwasser</div>
+           <div>0,25L	3,20€</div> 
+         </li>
+         <li class="food-item">
+           <div>137. Ayran</div>
+           <div>1,80€</div> 
+         </li>
+         <li class="food-item">
+           <div>138. Saft</div>
+           <div>0,20L	3,20€</div> 
+         </li>
+         <h6>Orangensaft, Bananensaft, Apfelsaft, Maracujanektar, Rhabarbernektar </h6>
+         <li class="food-item">
+           <div>139. Apfelschorle</div>
+           <div>0,30L	3,40€</div> 
+         </li>
+         <li class="food-item">
+           <div>140. Tonic Water, Bitterlemon, Gingerale</div>
+           <div>0,20L	3,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>141. Coca-Cola, Sprite, Fanta…</div>
+           <div>0,30L	3,40€	</div> 
+         </li>
+         <h4>Heiße Getränke</h4>
+         <li class="food-item">
+           <div>146. Kaffee</div>
+           <div>2,90€</div> 
+         </li>
+         <li class="food-item">
+           <div>147. Latte Macchiato</div>
+           <div>3,90€</div> 
+         </li>
+         <li class="food-item">
+           <div>148. Kaffeecreme</div>
+           <div>2,90€</div> 
+         </li>
+         <li class="food-item">
+           <div>149. Cappuccino</div>
+           <div>3,20€</div> 
+         </li>
+         <li class="food-item">
+           <div>150. Milchkaffee</div>
+           <div>3,90€</div> 
+         </li>
+         <li class="food-item">
+           <div>151. Tee (verschiedene Sorten)</div>
+           <div>1,50€</div> 
+         </li>
+         <li class="food-item">
+           <div>152. Espresso</div>
+           <div>2,80€</div> 
+         </li>
+       </ul>
+
+       <div  class="food-item" >
+           <h2>Desserts</h2>
+          
+           </div>
+
+       <ul>
+           
+           <li class="food-item">
+               <div>161. Tiramisu </div>
+               <div>3,90€</div> 
+             </li>
+             <li class="food-item">
+               <div>162. Käsekuchen </div>
+               <div>3,90€</div> 
+             </li>
+             <li class="food-item">
+               <div>163. Milchreis</div>
+               <div>3,50€</div> 
+             </li>
+             <li class="food-item">
+               <div>164. Ashta & Saisonfrüchte mit Honig oder Zuckersirup</div>
+               <div>7,50€</div> 
+             </li>
+             <h4>165. Süßspeisen (jeden Tag im Wechsel an der Theke) </h4>
+       </ul>
+
+       <div  class="food-item" style="text-align: center;">
+           <h2>Extras</h2>
+          
+           </div>
+       <ul>
+       <li class="food-item">
+           <div>166. gekochtes Ei</div>
+           <div>1,50€</div> 
+         </li>
+       
+         <li class="food-item">
+           <div>167. Butter</div>
+           <div>1,50€</div> 
+         </li>
+         <li class="food-item">
+           <div>168. Scheibe Käse	</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>169. Scheibe Wurst	</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>170. Marmelade	</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>171. Nutella</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>172. Oliven</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>173. Ashta</div>
+           <div>1,50€</div> 
+         </li>
+         <li class="food-item">
+           <div>174. Honig</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>175. Sesampaste</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>176. Aioli</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>177. Scheibe Brot</div>
+           <div>0,80€</div> 
+         </li>
+         <li class="food-item">
+           <div>178. Brötchen</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>179. Brotkorb</div>
+           <div>2,50€</div> 
+         </li>
+         <li class="food-item">
+           <div>180. Beilagen Teller</div>
+           <div>3,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>181. Ketchup / Mayonnaise</div>
+           <div>1,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>182. Portion Pommes</div>
+           <div>4,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>183. Portion Reis</div>
+           <div>4,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>184. Portion Bulgur</div>
+           <div>4,00€</div> 
+         </li>
+         <li class="food-item">
+           <div>185. Portion mediterranes Gemüse</div>
+           <div>6,90€</div> 
+         </li>
+       </ul>
+   
+   
+   <style>
+      
+   body{
+       background-color: gray;
+      
+       word-wrap: break-word;
+   }
+       li {
+             font-family: arial, sans-serif;
+             border-collapse: collapse;
+             width: 100%;
+             color: rgb(245, 234, 234);
+             border-color: rgb(244, 247, 247);
+             
+           }
+     
+           td, th {
+             border: 1px solid #fcf4f4;
+             text-align: left;
+             padding: 8px;
+             color: rgb(12, 12, 12);
+           }
+
+           div {
+             
+             width: 100%;
+            
+           }
+           h2{
+               font-family: 'Gothic Medium';
+               color: aqua;
+              
+           }
+           h6{
+            font-size: smaller;
+           
+           }
+         </style>
+        
+         
+   </body>
+   </html>
